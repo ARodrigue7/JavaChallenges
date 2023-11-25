@@ -10,7 +10,7 @@ public class Exercise2 {
         question[0] = "Are you male? ";
         question[1] = "Do you live in the USA? ";
         question[2] = "Did you graduate college? ";
-        question[3] = "Are you in the military? ";
+        question[3] = "Are you a veteran? ";
         question[4] = "Are you working? ";
 
         boolean[] answers = new boolean[5];
