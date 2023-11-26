@@ -69,7 +69,14 @@ public class GuestList {
     static void removeGuest(){
         System.out.print("Number: ");
         int num = scanner.nextInt();
-        guests[num - 1] = null;
+        if (num > 0 && num < guests.length && guests[num-1] != null){
+            guests[num - 1] = null;
+        }
+        else {
+            System.out.print("Error: There is no guest with that number.");
+        }
+
+
 
         String[] sortGuests = new String[guests.length];
         int sortIndex = 0;
