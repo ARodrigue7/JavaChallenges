@@ -3,10 +3,12 @@ package GuestListProgram;
 import java.util.Scanner;
 
 public class GuestList {
+
+    static String[] guests = new String[10];
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String[] guests = new String[10];
         guests[0] = "Jacob";
         guests[1] = "Edward";
         guests[2] = "Rose";
@@ -14,7 +16,7 @@ public class GuestList {
         guests[4] = "Christopher";
 
         do {
-            displayGuests(guests);
+            displayGuests();
             System.out.println("_______________________\n- Menu -\n");
             System.out.println("1 - Add Guest");
             System.out.println("2 - Remove Guest");
@@ -50,7 +52,7 @@ public class GuestList {
 
     }
 
-    static void displayGuests(String[] guests){
+    static void displayGuests(){
         System.out.println("_______________________\n- Guests -\n");
         for (String e : guests) {
             System.out.println(e == null ? "--" : e);
