@@ -67,10 +67,10 @@ public class GuestList {
     }
 
     static void removeGuest(){
-        System.out.print("Name: ");
-        String name = scanner.next();
+        System.out.print("Option: ");
+        int input = scanner.nextInt();
         for (int i = 0; i < guests.length; i++) {
-            if (guests[i] != null && guests[i].equals(name)) {
+            if (guests[i] != null && i+1 == input) {
                 guests[i] = null;
                 break;
             }
