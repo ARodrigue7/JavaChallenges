@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class GuestList {
     static Scanner scanner = new Scanner(System.in);
     static String[] guests = new String[10];
-    static int option;
 
     public static void main(String[] args) {
         guests[0] = "Jacob";
@@ -17,6 +16,10 @@ public class GuestList {
         do {
             displayGuests();
             displayMenu();
+
+            System.out.print("Option: ");
+            int option = scanner.nextInt();
+            System.out.println();
 
             if (option == 1) {
                 for (int i = 0; i < guests.length; i++) {
@@ -57,9 +60,6 @@ public class GuestList {
         System.out.println("1 - Add Guest");
         System.out.println("2 - Remove Guest");
         System.out.println("3 - Exit");
-        System.out.print("Option: ");
-        option = scanner.nextInt();
-        System.out.println();
     }
 
 }
