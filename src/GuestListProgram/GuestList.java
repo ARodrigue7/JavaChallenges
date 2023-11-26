@@ -52,6 +52,7 @@ public class GuestList {
     static int getOption(){
         System.out.print("Option: ");
         int option = scanner.nextInt();
+        scanner.nextLine(); //consumes next line caused by enter key when selecting option
         System.out.println();
         return option;
     }
@@ -60,7 +61,7 @@ public class GuestList {
         for (int i = 0; i < guests.length; i++) {
             if (guests[i] == null) {
                 System.out.print("Name: ");
-                guests[i] = scanner.next();
+                guests[i] = scanner.nextLine();
                 break;
             }
         }
@@ -73,7 +74,7 @@ public class GuestList {
             guests[num - 1] = null;
         }
         else {
-            System.out.print("Error: There is no guest with that number.");
+            System.out.println("\nError: There is no guest with that number.");
         }
 
 
