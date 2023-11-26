@@ -39,9 +39,9 @@ public class GuestList {
                 }
                 String[] sortGuests = new String[guests.length];
                 int sortIndex = 0;
-                for (int i = 0; i < guests.length; i++) {
-                    if (guests[i] != null) {
-                        sortGuests[sortIndex] = guests[i];
+                for (String guest : guests) {
+                    if (guest != null) {
+                        sortGuests[sortIndex] = guest;
                         sortIndex++;
                     }
                 }
@@ -57,12 +57,14 @@ public class GuestList {
 
     static void displayGuests(){
         System.out.println("_______________________\n- Guests -\n");
+        boolean isEmpty = true;
         for (int i = 0; i < guests.length; i++) {
             if (guests[i] != null) {
                 System.out.println((i + 1) + ". " + guests[i]);
+                isEmpty = false;
             }
         }
-        if (guests[0] == null) {
+        if (isEmpty) {
             System.out.println("Guest list empty.");
         }
     }
