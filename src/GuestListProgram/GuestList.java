@@ -20,10 +20,10 @@ public class GuestList {
                 addGuest();
             }
             else if (option == 2) {
-                removeGuest();
+                renameGuest();
             }
             else if (option == 3) {
-                renameGuest();
+                removeGuest();
             }
             else if (option == 4) {
                 System.out.println("Exiting...");
@@ -49,8 +49,8 @@ public class GuestList {
     static void displayMenu(){
         System.out.println("_______________________\n- Menu -\n");
         System.out.println("1 - Add Guest");
-        System.out.println("2 - Remove Guest");
-        System.out.println("3 - Rename Guest");
+        System.out.println("2 - Rename Guest");
+        System.out.println("3 - Remove Guest");
         System.out.println("4 - Exit");
     }
     static int getOption(){
@@ -75,8 +75,14 @@ public class GuestList {
         System.out.print("Number: ");
         int num = scanner.nextInt();
         scanner.nextLine(); //consumes new line caused by user input
-        System.out.print("New name: ");
-        guests[num-1] = scanner.nextLine();
+
+        if (num > 0 && num < guests.length && guests[num-1] != null) {
+            System.out.print("New name: ");
+            guests[num - 1] = scanner.nextLine();
+        }
+        else {
+            System.out.println("\nError: There is no guest with that number.");
+        }
     }
 
     static void removeGuest(){
