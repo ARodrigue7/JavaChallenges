@@ -23,6 +23,9 @@ public class GuestList {
                 removeGuest();
             }
             else if (option == 3) {
+                renameGuest();
+            }
+            else if (option == 4) {
                 System.out.println("Exiting...");
                 break;
             }
@@ -47,7 +50,8 @@ public class GuestList {
         System.out.println("_______________________\n- Menu -\n");
         System.out.println("1 - Add Guest");
         System.out.println("2 - Remove Guest");
-        System.out.println("3 - Exit");
+        System.out.println("3 - Rename Guest");
+        System.out.println("4 - Exit");
     }
     static int getOption(){
         System.out.print("Option: ");
@@ -65,6 +69,14 @@ public class GuestList {
                 break;
             }
         }
+    }
+
+    static void renameGuest(){
+        System.out.print("Number: ");
+        int num = scanner.nextInt();
+        scanner.nextLine(); //consumes new line caused by user input
+        System.out.print("New name: ");
+        guests[num-1] = scanner.nextLine();
     }
 
     static void removeGuest(){
