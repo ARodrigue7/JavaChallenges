@@ -18,7 +18,6 @@ public class Exercise6 {
 
             if (guess < randomNumber) {
                 System.out.println("HIGHER");
-                continue;
             }
             else if (guess > randomNumber) {
                 System.out.println("LOWER");
