@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class GuestList {
     public static void main(String[] args) {
-
-        String[] guests = new String[10];
         Scanner scanner = new Scanner(System.in);
 
+        String[] guests = new String[10];
         guests[0] = "Jacob";
         guests[1] = "Edward";
         guests[2] = "Rose";
@@ -15,10 +14,7 @@ public class GuestList {
         guests[4] = "Christopher";
 
         do {
-            System.out.println("_______________________\n- Guests -\n");
-            for (String e : guests) {
-                System.out.println(e == null ? "--" : e);
-            }
+            displayGuests(guests);
             System.out.println("_______________________\n- Menu -\n");
             System.out.println("1 - Add Guest");
             System.out.println("2 - Remove Guest");
@@ -53,4 +49,13 @@ public class GuestList {
         } while (true);
 
     }
+
+    static void displayGuests(String[] guests){
+        System.out.println("_______________________\n- Guests -\n");
+        for (String e : guests) {
+            System.out.println(e == null ? "--" : e);
+        }
+    }
+
 }
+
