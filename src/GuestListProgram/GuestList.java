@@ -2,7 +2,7 @@ package GuestListProgram;
 
 import java.util.Scanner;
 
-public class Exercise2 {
+public class GuestList {
     public static void main(String[] args) {
 
         String[] guests = new String[10];
