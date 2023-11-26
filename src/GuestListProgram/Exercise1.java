@@ -25,13 +25,8 @@ public class Exercise1 {
             System.out.println();
 
             if (option == 1) {
-                for (int i = 0; i < guests.length; i++) {
-                    if (guests[i] == null){
-                        System.out.println("--");
-                    } else if (guests[i] != null) {
-                        System.out.println(guests[i]);
-                    }
-
+                for (String e : guests) {
+                    System.out.println(e == null ? "--" : e);
                 }
             }
             else if (option == 2) {
