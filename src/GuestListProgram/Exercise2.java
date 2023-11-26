@@ -15,10 +15,7 @@ public class Exercise2 {
         guests[4] = "Christopher";
 
         do {
-            System.out.println();
-            System.out.println("_______________________");
-            System.out.println("- Menu -");
-
+            System.out.println("_______________________\n- Menu -\n");
             System.out.println("1 - Display All Guests");
             System.out.println("2 - Add Guest");
             System.out.println("3 - Remove Guest");
@@ -28,8 +25,7 @@ public class Exercise2 {
             System.out.println();
 
             if (option == 1) {
-                System.out.println("_______________________");
-                System.out.println("- Guests -");
+                System.out.println("_______________________\n- Guests -\n");
                 for (String e : guests) {
                     System.out.println(e == null ? "--" : e);
                 }
