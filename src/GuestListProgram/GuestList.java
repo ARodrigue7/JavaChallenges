@@ -37,6 +37,15 @@ public class GuestList {
                         break;
                     }
                 }
+                String[] sortGuests = new String[guests.length];
+                int sortIndex = 0;
+                for (int i = 0; i < guests.length; i++) {
+                    if (guests[i] != null) {
+                        sortGuests[sortIndex] = guests[i];
+                        sortIndex++;
+                    }
+                }
+                guests = sortGuests;
             }
             else if (option == 3) {
                 System.out.println("Exiting...");
