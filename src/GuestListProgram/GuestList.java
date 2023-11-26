@@ -48,8 +48,8 @@ public class GuestList {
 
     static void displayGuests(){
         System.out.println("_______________________\n- Guests -\n");
-        for (String e : guests) {
-            System.out.println(e == null ? "--" : e);
+        for (int i = 0; i < guests.length; i++) {
+            System.out.println(guests[i] == null ? i+1 + ". --" : i+1 + ". " + guests[i]);
         }
     }
     static void displayMenu(){
